@@ -26,6 +26,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  z-index: 100; 
 }
 
 nav img {
@@ -64,6 +65,8 @@ nav ul li a {
   padding: 0 2rem;
   color: #fff;
   margin-top: 0;
+  position: relative;
+  z-index: 1; /* Lower than nav */
 }
 
 .hero-container {
@@ -72,6 +75,8 @@ nav ul li a {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  position: relative;
+  z-index: 1; /* Lower than nav */
 }
 
 .hero-text {
@@ -154,6 +159,8 @@ nav ul li a {
   border: 4px solid #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   object-fit: cover;
+  position: relative;
+  z-index: 1; /* Lower than nav */
 }
 
 .hero h2 {
@@ -344,8 +351,6 @@ footer {
     width: 100%;
     background: #121212;
     padding: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
   }
 
   .nav-links.active {
