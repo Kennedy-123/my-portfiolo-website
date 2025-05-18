@@ -1,5 +1,5 @@
 /* Import the decorative font */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 * {
   margin: 0;
@@ -7,11 +7,16 @@
   box-sizing: border-box;
 }
 
+body[data-aos-duration='4000'] [data-aos],
+[data-aos][data-aos][data-aos-duration='4000'] {
+  transition-duration: 4000ms;
+}
+
+
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
-  color: #333;
-  background: #fff;
+  background-color: #121212;
 }
 
 /* Navbar styles */
@@ -21,12 +26,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #f8f8f8;
 }
 
-nav h1 {
-  font-weight: 700;
-  color: #ff6600;
+nav img {
+  width: 80px;
 }
 
 nav ul {
@@ -38,29 +41,37 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: white;
   font-weight: 600;
 }
 
 .menu-toggle {
   display: none;
+  color: white;
   font-size: 1.5rem;
   background: none;
   border: none;
   cursor: pointer;
 }
 
+/* Hero Section */
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 0 2rem;
+  color: #fff;
+  margin-top: 0;
 }
 
 .hero-container {
+  max-width: 800px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 4rem 2rem;
   gap: 2rem;
-  flex-wrap: wrap; /* Ensures responsiveness on small screens */
 }
 
 .hero-text {
@@ -68,37 +79,36 @@ nav ul li a {
   min-width: 300px;
 }
 
-.hero-text .intro {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1rem;
-  font-family: Pacifico, cursive; /* Apply the decorative font */
-}
-
-/* Style for the highlighted intro text */
-.highlighted-text {
-    font-family: Pacifico, cursive; /* Apply the decorative font */
-    font-size: 2.5rem; /* Larger font size for emphasis */
-    font-weight: 700; /* Bold text */
-    color: #333; /* Darker color for readability */
-    line-height: 1.4; /* Better spacing between lines */
-    text-align: left; /* Align text to the left */
-    background: linear-gradient(to right, #007bff, #00d4ff); /* Gradient background */
-    -webkit-background-clip: text; /* Clip the background to the text */
-    -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
-    margin-bottom: 1.5rem; /* Add spacing below the text */
-  }
-
 .hero-text h2 {
-  font-size: 2.5rem;
-  line-height: 1.4;
-  color: #222;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-weight: 600;
+  font-family: Pacifico, cursive;
 }
 
 .hero-text h2 span {
-  color: #007bff; /* Highlighted text color */
-  text-decoration: underline;
+  color: #007bff;
+  font-family: Pacifico, cursive;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
 .download-btn {
@@ -117,24 +127,42 @@ nav ul li a {
   background: #0056b3;
 }
 
-.hero-image {
-  flex: 1;
-  min-width: 300px;
-  text-align: center;
+.icon-btn {
+  background: #fff;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-btn:hover {
+  background: #e0e0e0;
 }
 
 .hero-image img {
-  max-width: 100%;
-  width: 90vw;
-  height: 50vh; /* Ensures the aspect ratio is maintained */
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Set a specific width for resizing */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
 }
 
 .hero h2 {
   font-size: 2.5rem;
-  color: #222;
+  color: white;
+}
+
+.hero-text p {
+  font-family: Pacifico, cursive;
 }
 
 .hero p {
@@ -150,34 +178,106 @@ nav ul li a {
 
 .section h2 {
   font-size: 2rem;
-  color: #222;
+  color: white;
   margin-bottom: 1rem;
 }
 
-.projects,
+.section p {
+  color: white;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project {
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.project:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #222;
+}
+
+.project-info {
+  padding: 1.2rem;
+  text-align: left;
+  width: 100%;
+}
+
+.project-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #007bff;
+}
+
+.project-info p {
+  color: #eee;
+  font-size: 1rem;
+}
+
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
-.project,
 .service {
-  background: #fafafa;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+  padding-bottom: 1.5rem;
 }
 
-.project h3,
-.service h3 {
-  margin-bottom: 0.5rem;
-  color: #ff6600;
+.service:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.service-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  background: #222;
+}
+
+.service-info {
+  padding: 1.2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.service-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #007bff;
+}
+
+.service-info p {
+  color: #eee;
+  font-size: 1rem;
 }
 
 #contact a {
-  color: #ff6600;
+  color: #007bff;
   text-decoration: none;
 }
 
@@ -196,26 +296,37 @@ footer {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-container {
-    flex-direction: column-reverse; /* Stack the text and image vertically */
+    flex-direction: column;
     text-align: center;
   }
 
   .hero-text {
-    margin-bottom: 2rem; /* Add spacing between text and image */
+    margin-bottom: 2rem;
   }
 
   .hero-text h2 {
-    font-size: 2rem; /* Reduce font size for smaller screens */
+    font-size: 1.5rem;
   }
 
-  .hero-image img {
-    width: 80%; /* Adjust image size for smaller screens */
-    height: auto; /* Maintain aspect ratio */
+  .hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .icon-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-btn img {
+    width: 24px;
+    height: 24px;
   }
 
   nav ul {
-    flex-direction: column; /* Stack navigation links vertically */
-    gap: 1rem; /* Add spacing between links */
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .menu-toggle {
@@ -231,7 +342,7 @@ footer {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #f8f8f8;
+    background: #121212;
     padding: 1rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 10;
@@ -249,20 +360,29 @@ footer {
   }
 
   .cta {
-    padding: 0.5rem 1rem; /* Adjust button size */
-    font-size: 0.9rem; /* Adjust font size */
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 
-  .hero-image img {
-    width: 100%; /* Make the image take full width */
-  }
+  /* .hero-image img {
+    width: 150px;
+    height: 150px;
+  } */
 
   .section {
-    padding: 2rem 1rem; /* Reduce padding for smaller screens */
+    padding: 2rem 1rem;
+  }
+
+  section h2 {
+    text-align: center;
+  }
+
+  #about {
+    text-align: center;
   }
 
   .projects,
   .services {
-    grid-template-columns: 1fr; /* Display items in a single column */
+    grid-template-columns: 1fr;
   }
 }
