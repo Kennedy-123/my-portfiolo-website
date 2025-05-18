@@ -364,11 +364,6 @@ footer {
     font-size: 0.9rem;
   }
 
-  /* .hero-image img {
-    width: 150px;
-    height: 150px;
-  } */
-
   .section {
     padding: 2rem 1rem;
   }
@@ -384,5 +379,9 @@ footer {
   .projects,
   .services {
     grid-template-columns: 1fr;
+  }
+
+  nav img{
+    width: 3.2rem;
   }
 }
