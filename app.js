@@ -15,3 +15,5 @@ navLinks.querySelectorAll('a').forEach(link => {
         }
     });
 });
+
+document.getElementById('current-year').textContent = new Date().getFullYear();

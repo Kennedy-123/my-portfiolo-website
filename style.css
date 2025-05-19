@@ -292,6 +292,10 @@ nav ul li a {
   text-decoration: underline;
 }
 
+#contact p {
+  display: flex;
+}
+
 footer {
   text-align: center;
   padding: 2rem;
@@ -300,7 +304,64 @@ footer {
   margin-top: 2rem;
 }
 
-/* Responsive adjustments */
+/* Contact Section Styling */
+#contact.section {
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: #fff;
+  background: #23272f;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.contact-icon:hover {
+  background: #007bff;
+  color: #fff;
+  transform: translateY(-6px) scale(1.12);
+  box-shadow: 0 8px 32px rgba(0,123,255,0.18);
+  border-color: #fff;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .contact-icons {
+    gap: 1.2rem;
+  }
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
@@ -388,5 +449,9 @@ footer {
 
   nav img{
     width: 3.2rem;
+  }
+
+  footer p{
+    font-size: 0.8rem;
   }
 }
