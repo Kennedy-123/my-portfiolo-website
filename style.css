@@ -28,10 +28,6 @@ nav {
   z-index: 100;
 }
 
-/* nav img {
-  width: 80px;
-} */
-
 nav ul {
   list-style: none;
   display: flex;
@@ -544,6 +540,10 @@ header h1 {
 
   header h1{
     font-size: 1rem
+  }
+
+  nav{
+    padding: 0 15px;
   }
 
   .cta {
