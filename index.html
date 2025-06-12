@@ -7,6 +7,7 @@
     <title>Kennedy | Dev💻</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
@@ -16,7 +17,7 @@
 <body>
     <header id="home">
         <nav class="animate__animated animate__fadeInDown">
-            <img src="/images/logo.png" alt="">
+             <h1>Portfolio.</h1>
             <button class="menu-toggle" aria-label="Toggle navigation">
                 ☰
             </button>
@@ -63,34 +64,18 @@
         </section>
     </header>
 
-    <!-- Rest of the site -->
+    <!-- about section -->
     <section id="about" class="section">
         <h2 data-aos="fade-down" data-aos-duration="1000">About Me</h2>
-        <p data-aos="fade-down" data-aos-duration="1000">Hi, I’m Kennedy — a results-driven Full Stack Developer with
-            over 3 years of experience building
-            high-performing, user-friendly web applications and digital solutions. I specialize in creating scalable,
-            responsive, and visually engaging platforms using modern technologies like React.js, Next.js, Node.js, and
-            Flask.
-
-            With a strong foundation in both frontend and backend development, I enjoy crafting seamless user
-            experiences while ensuring robust functionality behind the scenes. I’ve worked on a range of projects, from
-            e-commerce platforms and automation tools to SaaS dashboards and AI-integrated solutions.
-
-            I’m passionate about solving real-world problems with clean, maintainable code and intuitive design. Whether
-            I’m developing a custom API, building a mobile-friendly UI, or integrating third-party services, I approach
-            every project with clarity, creativity, and a commitment to quality.
-
-            Beyond coding, I’m a continuous learner and tech enthusiast with a keen interest in AI, automation, and
-            building tools that empower users and businesses. I thrive in collaborative environments and enjoy sharing
-            knowledge with fellow developers. I’m always on the lookout for new challenges and opportunities to grow my
-            skills and contribute to innovative projects.
-
-            When I’m not coding, you can find me exploring the latest tech trends, contributing to open-source projects,
-            or enjoying a good book. Let’s connect and create something amazing together!
-
+        <p data-aos="fade-down" data-aos-duration="1000">Hi, I’m Kennedy — a Full Stack Developer passionate about
+            building scalable, user-friendly digital solutions. With 3+ years of experience in frontend and backend
+            development, I work with technologies like React.js, Next.js, Node.js, and Flask to create intuitive web
+            apps, automation tools, and AI-driven platforms. I love learning, sharing knowledge, and collaborating on
+            innovative projects. Let’s create something awesome together!
         </p>
     </section>
 
+    <!-- project section -->
     <section id="projects" class="section">
         <h2 data-aos="fade-down" data-aos-duration="1000">Projects</h2>
         <div class="projects">
@@ -101,6 +86,16 @@
                     <p>A price-tracking bot for Jumia that monitors product prices and sends email alerts when prices
                         drop.
                     </p>
+                    <div class="project-tags">
+                        <span class="tag">Flask</span>
+                        <span class="tag">selenium</span>
+                        <span class="tag">React.js</span>
+                        <span class="tag">TailwindCSS</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <a href="https://github.com/Kennedy-123/jumibot" target="_blank" class="project-btn">
+                        <i class="fab fa-github"></i> Code
+                    </a>
                 </div>
             </div>
             <div class="project" data-aos="flip-down" data-aos-duration="3000">
@@ -111,20 +106,40 @@
                     <p>A coding school platform built with Next.js and Clerk to help aspiring developers learn full
                         stack
                         development.</p>
+                    <div class="project-tags">
+                        <span class="tag">Next.js</span>
+                        <span class="tag">TailwindCSS</span>
+                        <span class="tag">Clerk</span>
+                        <span class="tag">TypeScript</span>
+                    </div>
+                    <a href="https://github.com/Kennedy-123/autobot-academy.git" target="_blank" class="project-btn">
+                        <i class="fab fa-github"></i> Code
+                    </a>
                 </div>
             </div>
             <div class="project" data-aos="flip-down" data-aos-duration="4000">
                 <img src="/images/content-craft-logo.png" alt="Content Craft project screenshot" class="project-img">
                 <div class="project-info">
-                    <h3>Content Craft</h3>
+                    <h3>Content Craft <span class="ongoing">(ongoing)</span></h3>
                     <p>A content creation assistant built with AI to help creators generate, organize, and optimize
                         digital
                         content efficiently.</p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Clerk</span>
+                    </div>
+                    <a href="https://github.com/Kennedy-123/Content-Craft.git" target="_blank" class="project-btn">
+                        <i class="fab fa-github"></i> Code
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- services section -->
     <section id="services" class="section">
         <h2 data-aos="fade-down" data-aos-duration="1000">Services</h2>
         <div class="services">
@@ -153,6 +168,73 @@
         </div>
     </section>
 
+    <!-- skills section -->
+    <section id="skills" class="section">
+        <h2 class="skills-title" data-aos="fade-down" data-aos-duration="1000">My Skills</h2>
+        <div class="skills-grid" data-aos="fade-up" data-aos-duration="1200">
+            <div class="skill-card">
+                <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_256.png" alt="HTML5" class="skill-icon">
+                <span>HTML5</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+                    class="skill-icon">
+                <span>CSS3</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript" class="skill-icon">
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                    alt="TypeScript" class="skill-icon">
+                <span>TypeScript</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js"
+                    class="skill-icon">
+                <span>React.js</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://petermekhaeil.gallerycdn.vsassets.io/extensions/petermekhaeil/vscode-tailwindcss-explorer/0.7.0/1655742967328/Microsoft.VisualStudio.Services.Icons.Default"
+                    alt="TailwindCSS" class="skill-icon">
+                <span>TailwindCSS</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"
+                    class="skill-icon">
+                <span>Next.js</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"
+                    class="skill-icon">
+                <span>Node.js</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"
+                    class="skill-icon">
+                <span>MongoDB</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/free-git-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-225996.png?f=webp&w=256"
+                    alt="Git" class="skill-icon">
+                <span>Git</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/free-python-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-5-pack-logos-icons-2945099.png?f=webp&w=256"
+                    alt="Python" class="skill-icon">
+                <span>Python</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    alt="React Native" class="skill-icon">
+                <span>React Native</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
     <section id="contact" class="section">
         <h2 data-aos="fade-down" data-aos-duration="1000">Contact Me</h2>
         <div class="contact-icons" data-aos="fade-up" data-aos-duration="1200">
