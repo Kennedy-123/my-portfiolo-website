@@ -7,6 +7,12 @@
   box-sizing: border-box;
 }
 
+/* Prevent any horizontal overflow coming from viewport-sized elements */
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body[data-aos-duration="4000"] [data-aos],
 [data-aos][data-aos][data-aos-duration="4000"] {
   transition-duration: 4000ms;
@@ -16,6 +22,13 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   background-color: #121212;
+  overflow-x: hidden; /* ✅ prevents horizontal scroll/zoom-out */
+}
+
+img {
+  max-width: 100%; /* ✅ responsive images */
+  height: auto;
+  display: block;
 }
 
 /* Navbar styles */
@@ -70,17 +83,19 @@ nav ul li a:hover {
 
 .hero-container {
   max-width: 800px;
+  width: 100%; /* ✅ makes container responsive */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
   position: relative;
-  z-index: 1; /* Lower than nav */
+  z-index: 1;
 }
 
 .hero-text {
   flex: 1;
-  min-width: 300px;
+  /* allow this flex child to shrink on very small viewports to avoid forcing horizontal scroll */
+  min-width: 0;
 }
 
 .hero-text h2 {
@@ -159,7 +174,7 @@ nav ul li a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   object-fit: cover;
   position: relative;
-  z-index: 1; /* Lower than nav */
+  z-index: 1;
 }
 
 .hero h2 {
@@ -178,6 +193,7 @@ nav ul li a:hover {
 
 .section {
   padding: 4rem 2rem;
+  width: 100%;
   max-width: 1000px;
   margin: auto;
 }
@@ -459,7 +475,6 @@ header h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
   text-shadow: 0 2px 16px rgba(34,255,136,0.08), 0 1px 0 #111;
 }
 
