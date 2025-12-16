@@ -456,12 +456,35 @@ footer {
   letter-spacing: 0.5px;
   cursor: pointer;
 }
+.live-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 1.2rem;
+  padding: 0.6em 1.6em;
+  background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.05rem;
+  border: none;
+  box-shadow: 0 4px 16px rgba(0,123,255,0.12);
+  transition: background 0.25s, color 0.25s, transform 0.18s, box-shadow 0.25s;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
 
 .project-btn:hover {
   background: linear-gradient(90deg, #22ff88 0%, #007bff 100%);
   color: #23272f;
   transform: translateY(-3px) scale(1.04);
   box-shadow: 0 8px 32px rgba(34,255,136,0.18);
+}
+
+.live-btn:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 20px rgba(255, 75, 43, 0.3);
 }
 
 header h1 {
